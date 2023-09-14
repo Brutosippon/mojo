@@ -6,25 +6,25 @@ import os
 import copy
 
 ## COPY RELATIVE PATH DA PASTA COM OS FICHEIROS XLSX
-modelDir = 'excel_ficheiros'
+var modelDir = 'excel_ficheiros'
 
 ## LISTAR TODOS OS FICHEIROS NA PASTA
-files = os.listdir(modelDir)
+var files = os.listdir(modelDir)
 
 ## VARIAVEL PARA RECEBER DADOS
-data = []
+var data = []
 
 ## PERCORRER TODOS OS FICHEIROS E GUARDAR OS DADOS NA VAR DADOS
-conf = pd.read_excel('CONFIGURAR.xlsx')
+var conf = pd.read_excel('CONFIGURAR.xlsx')
 
 ## for each file in folder
 for f in files:
     try:
         #print(f)
         ## LOAD THE WORKBOOK 
-        wb = xl.load_workbook(modelDir + str("\\") + f, data_only=True)
+        var wb = xl.load_workbook(modelDir + str("\\") + f, data_only=True)
         ## escolher nome do cabeçalho e atribuir o valor
-        aux = {}
+        var aux = {}
         for i, r in conf.iterrows():
             aux['Ficheiro'] = f
             if r['Sheet'] == 'active':
@@ -42,7 +42,7 @@ for f in files:
     #break
 
 ## EXPORTAR O RESULTADO PARA EXCEL
-df = pd.DataFrame(data)
+var df = pd.DataFrame(data)
 print(df.shape)
 print(df.head())
 
