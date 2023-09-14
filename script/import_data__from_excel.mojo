@@ -25,6 +25,8 @@ for f in files:
         var wb = xl.load_workbook(modelDir + str("\\") + f, data_only=True)
         ## escolher nome do cabeçalho e atribuir o valor
         var aux = {}
+    
+
         for i, r in conf.iterrows():
             aux['Ficheiro'] = f
             if r['Sheet'] == 'active':
