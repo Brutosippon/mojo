@@ -1,4 +1,7 @@
 # Welcome to Mojo 🔥
+export MODULAR_HOME="$HOME/.modular"
+export PATH="$MODULAR_HOME/pkg/packages.modular.com_mojo/bin:$PATH"
+
 
 Mojo is a new programming language that bridges the gap between research 
 and production by combining Python syntax and ecosystem with systems 
