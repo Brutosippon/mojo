@@ -1,2 +1,4 @@
+
 fn main():
-    print("Hello, world!")
+    var name: String = "fidalgo"
+    print("Hello, " + name + "!")
